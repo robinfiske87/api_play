@@ -14,16 +14,11 @@
     min-height: 70vh;
 }
 
-.tableRowHeader {
-}
-
 .tableHeader {
     text-align: left;
     border-bottom: 1px solid grey;
     width:5vw;
 }
-
-.tableRow {}
 
 .tableRow:hover {
     background-color: pink;
