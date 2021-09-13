@@ -1,0 +1,15 @@
+.forecastModule {
+    flex-grow: 1;
+    color: black;
+    float: center;
+    padding: 5vh;
+    border: 1px solid #7775;
+   }
+
+.forecastModule:hover {
+    background-color: aliceblue;
+   }
+
+.descTitle {
+    width: 20vw;
+}

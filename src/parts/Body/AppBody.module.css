@@ -1,0 +1,42 @@
+.body {
+    flex-grow: 1;
+    width: 100vw;
+    display: grid; 
+    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-rows: 100px 90vh;
+    overflow-x: hidden;
+    grid-template-areas: 
+        "leftT centerT rightT"
+        "leftB centerB rightB";
+   }
+
+.selectCity {
+   grid-area: centerT;
+      flex-grow: 1;
+      font-weight: bold;
+      font-size: large;
+   }
+
+.selectCity-smaller {
+   grid-area: centerT;
+      flex-grow: 1;
+      font-weight: bold;
+      font-size: large;
+   }
+
+.weatherPanel {
+   grid-area: centerB;
+   text-align: 'center';
+   }
+
+.reactSimpleDropDownMenu {
+      font-weight: normal;
+      width: 25vw;
+      color: black;
+      min-width: 130px;
+    }
+    
+
+
+
+    

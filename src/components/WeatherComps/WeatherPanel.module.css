@@ -1,0 +1,26 @@
+.weatherPanel {
+    flex-grow: 1;
+    color: black;
+    float: left;
+    padding-bottom: 10vh;
+   }
+
+.liscence {
+      position: relative;
+      /* float: right; */
+      font-size: 0.7rem;
+      
+   }
+
+.title{
+   font-size: 1.5rem;
+}
+
+.button {
+   margin-top: 1vh;
+   background-color: #dae1e7;
+   min-width: 140px;
+}
+.button:hover {
+   background-color: white;
+}

@@ -1,0 +1,95 @@
+.Header {
+    flex-grow: 1;
+    position:sticky;
+    background-color: HSL(359, 90%, 63%);
+    color: black;
+    text-align: center;
+    width: 100vw;
+    height: 12vh;
+    margin-bottom: 3vh;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "left buttons dateTimeArea"; 
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    overflow-x: hidden;
+}
+.Header-medium {
+    flex-grow: 1;
+    position:sticky;
+    background-color: HSL(359, 90%, 63%);
+    color: black;
+    text-align: center;
+    height: 15vh;
+    margin-bottom: 3vh;
+    width: 100vw;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "left buttons dateTimeArea"; 
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    overflow-x: hidden;
+}
+.Header-small {
+    flex-grow: 1;
+    position:sticky;
+    background-color: HSL(359, 90%, 63%);
+    color: black;
+    text-align: center;
+    height: 12vh;
+    margin-bottom: 3vh;
+    width: 100vw;
+    display: grid; 
+    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-areas: 
+        "left buttons dateTimeArea"; 
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    overflow-x: hidden;
+}
+
+.DateTimeArea {
+    grid-area: dateTimeArea;
+    padding-right: 1.5vw;
+    text-align: right;
+}
+.DateTimeArea-medium {
+    grid-area: dateTimeArea;
+    padding-right: 1.5vw;
+    text-align: right;
+}
+.DateTimeArea-small {
+    grid-area: dateTimeArea;
+    padding-right: 1.5vw;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.viewButton {
+    grid-area: buttons;
+    text-align: center;
+}
+.viewButton-medium {
+    grid-area: buttons;
+    text-align: center;
+}
+.viewButton-small {
+    grid-area: buttons;
+    
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.button {
+    margin-top: 1vh;
+    border-color: red;
+    background-color: #dae1e7;
+    min-width: 170px;
+    font-size: 1rem;
+    min-height: 25px;
+}
+.button:hover {
+    background-color: white;
+}
+.button:focus {
+    border: 2px solid rgb(207, 125, 129)
+}
