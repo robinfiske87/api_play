@@ -5,7 +5,7 @@ import moment from 'moment'
 import customHooks from "../../services/customHooks"
 
 const AppHeader = (props) => {
-    const { windowSize, setView, view } = props
+    const { windowSize, setView } = props
     const [time, setTime] = useState()
     const [date, setDate] = useState()
     
