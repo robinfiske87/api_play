@@ -33,7 +33,7 @@ useWindowSize: function(){
 
   return windowSize
 },
-
+// custom Hook to make available interval polling in an easy to use way for functional react
 useInterval: function(callback, delay) {
 
   const savedCallback = useRef();
@@ -53,6 +53,8 @@ useInterval: function(callback, delay) {
     }
   }, [delay]);
 },
+
+// easy to use toggle-hook
 useToggle(defaultValue) {
   const [value, setValue] = useState(defaultValue)
 

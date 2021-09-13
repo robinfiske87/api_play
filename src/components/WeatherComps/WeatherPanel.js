@@ -22,6 +22,7 @@ const WeatherPanel = (props) => {
     const [valueThird, toggleThirdValue] = customHooks.useToggle(false)
     const [refresh, toggleRefresh] = customHooks.useToggle(false)
 
+    // get data from API
     useEffect(() => {
         if (selectedOption !== null || undefined) {
           api
@@ -35,6 +36,7 @@ const WeatherPanel = (props) => {
       }, [selectedOption, refresh])
 
     
+      // function to identify index in array based on value and attribute
       function findWithAttr(array, attr, value) {
         for(var i = 0; i < array.length; i += 1) {
             if(array[i][attr] === value) {
@@ -44,6 +46,7 @@ const WeatherPanel = (props) => {
         return -1;
     }
 
+    // Regular polling of API to adjust for changes in data and time of day
       customHooks.useInterval(() => {
         if (selectedOption !== null || undefined) {
           api
@@ -56,6 +59,7 @@ const WeatherPanel = (props) => {
         }
       }, 30000, 10)
 
+      // make relevant index-assignments for subsequently mapping out relevant data based on asignments
       useEffect(() => {
         if(weatherData !== undefined || weatherData !== null){
           let nowAnswer = undefined  
@@ -82,6 +86,7 @@ const WeatherPanel = (props) => {
         console.log(weatherData)
       }
 
+      // Make arrays with relevant indexes for mapping out correct weatherData
       useEffect(() => {
         let array = []
         let arraySecond = []
@@ -103,6 +108,7 @@ const WeatherPanel = (props) => {
       }, [weatherArrayPlacement, thisDayArrayPlacementEnd, secondDayArrayPlacementBegin, thirdDayArrayPlacementBegin])
       
 
+      // TODO: Make modules for the three different weatherData-segments below
     return (
         <div className={styles['weatherPanel']}>
           <button className={styles['button']} onClick={refreshData}>Refresh data</button>

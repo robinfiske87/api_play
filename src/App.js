@@ -11,11 +11,14 @@ import customHooks from "./services/customHooks"
 
 function App() {
 
+  // set State for windowSize du build different layouts when needed
   const [windowSize, setWindowSize] = useState(null)
+  // set variable to change between views
   const [view, setView] = useState('weatherView')
 
   const screenWidth = customHooks.useWindowSize().width
 
+  // define variable based on windowSize
   useEffect(() => {
     if(screenWidth < 900){setWindowSize('small')}
     if(screenWidth < 1200 && screenWidth >= 900){setWindowSize('medium')}

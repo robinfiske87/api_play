@@ -4,7 +4,6 @@
     display: grid; 
     grid-template-columns: 1fr 3fr 1fr; 
     grid-template-rows: 100px 90vh;
-    overflow-x: hidden;
     grid-template-areas: 
         "leftT centerT rightT"
         "leftB centerB rightB";
@@ -27,6 +26,11 @@
 .weatherPanel {
    grid-area: centerB;
    text-align: 'center';
+   }
+.repoPanel {
+   grid-area: centerB;
+   text-align: 'center';
+   
    }
 
 .reactSimpleDropDownMenu {

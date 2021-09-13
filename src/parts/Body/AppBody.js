@@ -3,6 +3,7 @@ import styles from './AppBody.module.css'
 import Select from 'react-select'
 
 import WeatherPanel from '../../components/WeatherComps/WeatherPanel'
+import RepoPanel from '../../components/repoTable/RepoPanel'
 
 const AppBody = (props) => {
     const { windowSize, view } = props
@@ -95,6 +96,33 @@ const AppBody = (props) => {
                     <WeatherPanel selectedOption={selectedOption} />
                 </div>
             </div>
+        )
+    }
+    if(windowSize === 'medium' && view === 'repoView'){
+        return (
+          <div className={styles['body']}>
+          <div className={styles['repoPanel']}>
+              <RepoPanel/>
+          </div>
+        </div>
+        )
+    }
+    if(windowSize === 'small' && view === 'repoView'){
+        return (
+          <div className={styles['body']}>
+            <div className={styles['repoPanel']}>
+                <RepoPanel/>
+            </div>
+          </div>
+        )
+    }
+    if(windowSize === 'large' && view === 'repoView'){
+        return (
+          <div className={styles['body']}>
+            <div className={styles['repoPanel']}>
+                <RepoPanel/>
+            </div>
+          </div>
         )
     }
     else {return (
